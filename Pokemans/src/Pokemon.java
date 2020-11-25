@@ -64,6 +64,17 @@ public class Pokemon {
 
 
     //TODO: Fight function that takes a rival pokemon as a parameter, and they fight until one is passed out
+    public Fight(Pokemon p)
+    {
+        System.out.println(p + "blocks the way!");
+        GenerateActionMenu();
+    }
+    
+    //Generates action menu, hence the name. Multiple choices depending on the circumstance.
+    public void GenerateActionMenu()
+    {
+        System.out.println("Will you fight, flee, heal, or plead?");
+    }
 
 
 }
