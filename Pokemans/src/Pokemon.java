@@ -4,6 +4,7 @@ public class Pokemon {
     //Member Data
     private String name;
     private int hp = 100;
+    private int maxHp = 100;
     private int att;
     private int powerLevel = 0;
 
@@ -19,17 +20,46 @@ public class Pokemon {
         hp = 25;
         att = 10;
         powerLevel = 1;
+        maxHp=25;
 
     }
 
 
     //TODO: Constructor for me to make any pokemon I want
+    Pokemon(String _name, Types _type, int _hp, int _att, int _powerLevel)
+    {
+        name = _name;
+        type = _type;
+        hp = _hp;
+        maxHp = _hp;
+        att= _att;
+        powerLevel = _powerLevel;
+    }
 
     //Functions Actions Methods
 
     public void Details()
     {
-        System.out.println(name+" is a pokemon with "+hp+" hit points");
+        System.out.println(name+", Health: "+hp+"/"+maxHp);
+        System.out.println("Attack Power: "+att);
+
+        switch(type)
+        {
+            case Fire:
+                System.out.println("Type: Fire");
+                break;
+            case Water:
+                System.out.println("Type: Water");
+                break;
+            case Grass:
+                System.out.println("Type: Grass");
+                break;
+            case Normal:
+                System.out.println("Type: Normal");
+                break;
+            default:
+                System.out.println("Type: ?????");
+        }
     }
 
 
